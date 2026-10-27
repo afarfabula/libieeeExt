@@ -1,0 +1,93 @@
+id	edition	problem	tags	board_api	solution_ref	replay_status	note
+10-dog-walking	10.0	Dog Walking	greedy|sorting	std::sort	HL:Xtreme-10.0/Dog Walking	PASS-E2E	Official sample replayed.
+10-full-adder	10.0	Full Adder	simulation|big-integer|custom-base	BigInt	ES:ieeextreme10/P16 - Full Adder	PASS-E2E	Official sample replayed with a base-62 symbol adapter.
+10-n-palindromes	10.0	N-Palindromes	strings|combinatorics|dp	Comb	ES:ieeextreme10/P21 - N-Palindromes	PASS-E2E	Official sample replayed with exact-change generating functions.
+10-pirates	10.0	Pirates	tree|binary-lifting	BinaryLifting	HL:Xtreme-10.0/Pirates	PASS-MODULE	LCA, kth ancestor and tree distance are unit-tested.
+11-beetlebag	11.0	BeetleBag	dp|knapsack	knapsack01	HL:Xtreme-11.0/BeetleBag	PASS-MODULE	Module test covers 0/1 knapsack.
+11-blackgate	11.0	Blackgate Penitentiary	sorting|simulation	std::sort	HL:Xtreme-11.0/Blackgate Penitentiary	TODO-ADAPTER	Exact comparator and input format need a problem adapter.
+11-collecting-gold	11.0	Collecting Gold	grid-search|bfs-dfs	gridBFS	HL:Xtreme-11.0/Collecting Gold	PASS-MODULE	Grid BFS and path reconstruction are unit-tested.
+11-fibonacci	11.0	Fibonacci	matrix-exponentiation|modular-arithmetic	matrixPowMod	HL:Xtreme-11.0/Fibonacci	PASS-MODULE	Modular matrix exponentiation is unit-tested.
+11-gotta-catch-em-all	11.0	Gotta Catch 'Em All	graph|mst	kruskal	HL:Xtreme-11.0/Gotta Catch 'Em All	TODO-ADAPTER	Likely graph connectivity; confirm exact reduction before replay.
+11-jarawi-interview	11.0	Jarawi and the Interview	hashing|data-structure	unordered_map	HL:Xtreme-11.0/Jarawi and the Interview	PASS-MODULE	STL hash map is available; board has no custom wrapper.
+11-cheer-bob	11.0	Let's Cheer Up Bob	simulation|custom-logic	custom	HL:Xtreme-11.0/Let's Cheer Up Bob	TODO-ADAPTER	Problem-specific state transition is not in the generic board.
+11-lion-territory	11.0	Lion Territory	geometry|fenwick	Point|Fenwick	HL:Xtreme-11.0/Lion Territory	TODO-ADAPTER	Geometry and Fenwick primitives exist; transformations need replay.
+11-math-challenge	11.0	Math Challenge	number-theory|combinatorics	crtCoprime|Comb	HL:Xtreme-11.0/Math Challenge	PASS-MODULE	CRT and combinatorics have module tests.
+11-maximum-sum	11.0	Maximum Sum	dp|maximum-subarray	kadane	HL:Xtreme-11.0/Maximum Sum	PASS-MODULE	Kadane and best subarray indices are unit-tested.
+11-odd-cycle	11.0	Odd Cycle Check	graph|dsu	DSU	HL:Xtreme-11.0/Odd Cycle Check	PASS-MODULE	DSU is tested; parity behavior still needs an adapter.
+11-preparing-12	11.0	Preparing for Xtreme 12.0	simulation	custom	HL:Xtreme-11.0/Preparing for Xtreme 12.0	TODO-ADAPTER	Simulation problem; no reusable state model.
+11-quipu	11.0	Quipu Function	number-theory|custom-logic	primeFactors	HL:Xtreme-11.0/Quipu Function	TODO-ADAPTER	Factorization helper exists.
+11-recxor	11.0	RecXor	bitwise|recursion	bit-operations	HL:Xtreme-11.0/RecXor	TODO-ADAPTER	Bit semantics are problem-specific.
+11-rumour	11.0	Rumour	graph|bfs-dfs	gridBFS	HL:Xtreme-11.0/Rumour	TODO-ADAPTER	Generic graph traversal is not separately wrapped.
+11-running-stairs	11.0	Running Up Stairs	dp|recurrence	custom	HL:Xtreme-11.0/Running Up Stairs	PASS-MODULE	Recurrence uses plain arrays; no named board helper.
+11-fast-curious	11.0	The Fast and the Curious	graph|bridges	custom-dfs|lowLink	HL:Xtreme-11.0/The Fast and the Curious	PASS-MODULE	Bridge and articulation-point detection are unit-tested.
+11-vangelis	11.0	Vangelis and the Batbear and the Bubbles challenge	simulation|custom-logic	custom	HL:Xtreme-11.0/Vangelis and the Batbear and the Bubbles challenge	TODO-ADAPTER	Problem-specific simulation.
+12-bear-sums	12.0	Bear Sums	hashing|two-pointer	unordered_map	HL:Xtreme-12.0/Bear Sums	PASS-MODULE	STL containers cover the core.
+12-bit-soccer	12.0	Bit Soccer	geometry|simulation	Point	HL:Xtreme-12.0/Bit Soccer	TODO-ADAPTER	Point primitives exist; rule modeling is pending.
+12-lemons	12.0	Lemons	math|custom-logic	custom	HL:Xtreme-12.0/Lemons	TODO-ADAPTER	Math identity needs a problem-specific reduction.
+12-product-rectangle	12.0	Product Rectangle	dp|maximum-subarray	maxSubrectangle	HL:Xtreme-12.0/Product Rectangle	PASS-MODULE	Maximum-sum subrectangle is unit-tested.
+12-tree-fun	12.0	Tree Fun	tree|binary-lifting	BinaryLifting	HL:Xtreme-12.0/Tree Fun	PASS-MODULE	LCA and kth-ancestor primitives are unit-tested.
+12-troll-coder	12.0	Troll Coder	interactive|custom-logic	custom	HL:Xtreme-12.0/Troll Coder	TODO-ADAPTER	Interactive protocol cannot be unit-tested as a normal stdin problem.
+13-alfa-pool	13.0	Alfa Pool	dp|probability	custom	HL:Xtreme-13.0/Alfa Pool	TODO-ADAPTER	DP recurrence is problem-specific.
+13-ave-caesar	13.0	Ave Ceasar!	strings|encoding	custom	HL:Xtreme-13.0/Ave Ceasar!	TODO-ADAPTER	String transformation needs an adapter.
+13-bearcity	13.0	Bearcity Renting	graph|bridges|dsu	lowLink|DSU	HL:Xtreme-13.0/Bearcity Renting	PASS-MODULE	Bridge detection and DSU are unit-tested.
+13-googolplex	13.0	Googolplex	number-theory|big-integer	BigInt	HL:Xtreme-13.0/Googolplex	PASS-MODULE	BigInt has randomized and fixed-oracle tests.
+13-infinite-string	13.0	Infinite String	binary-search|strings	firstTrue|lastTrue	HL:Xtreme-13.0/Infinite String	PASS-MODULE	Monotone integer binary search is unit-tested.
+13-lexical-addition	13.0	Lexical Addition	greedy|strings	custom	HL:Xtreme-13.0/Lexical Addition	TODO-ADAPTER	Greedy construction needs a problem adapter.
+13-min-permutation	13.0	Minimum Permutation	greedy|stack	stack	HL:Xtreme-13.0/Minimum Permutation	TODO-ADAPTER	STL stack is available.
+13-ranged-alfa	13.0	Ranged Alfa Pool	dp|prefix-sum	Fenwick	HL:Xtreme-13.0/Ranged Alfa Pool	TODO-ADAPTER	Fenwick is tested; exact recurrence still needs replay.
+13-lonely-shepherd	13.0	The Lonely Sheperd	math|custom-logic	custom	HL:Xtreme-13.0/The Lonely Sheperd	TODO-ADAPTER	Problem-specific math.
+13-xranda-tree	13.0	Xranda and Tree	tree|dsu|sorting	DSU	HL:Xtreme-13.0/Xranda and Tree	TODO-ADAPTER	DSU and sorting exist; tree reduction is pending.
+13-xtreme-rappers	13.0	Xtreme Rappers	greedy|math	maxBalancedGroups	HL:Xtreme-13.0/Xtreme Rappers	PASS-MODULE	Statement reviewed; official sample formula is unit-tested.
+14-coupon-codes	14.0	Coupon Codes	hashing|data-structure	unordered_map	HL:Xtreme-14.0/Coupon Codes	PASS-MODULE	STL hash containers cover the core.
+14-wooden-tables	14.0	Crafting Wooden Tables	greedy|dp	custom	HL:Xtreme-14.0/Crafting Wooden Tables	TODO-ADAPTER	Greedy/DP structure needs replay.
+14-magic-stones	14.0	Magic Stones I	graph|topological-sort	topologicalSort	HL:Xtreme-14.0/Magic Stones I	PASS-MODULE	Topological sorting is unit-tested.
+14-mosaic-3	14.0	Mosaic Decoration III	geometry|simulation	custom	HL:Xtreme-14.0/Mosaic Decoration III	TODO-ADAPTER	Problem-specific tiling logic.
+14-palindromes	14.0	Non-Overlapping Palindromes	strings|manacher|dp	manacherLength	HL:Xtreme-14.0/Non-Overlapping Palindromes	TODO-ADAPTER	Manacher length is tested; overlap optimization is not implemented.
+14-poker-game	14.0	Poker Game	dp|game|simulation	custom	HL:Xtreme-14.0/Poker Game	TODO-ADAPTER	Game-state DP is problem-specific.
+14-rescue-mission	14.0	Rescue Mission	grid-search|graph	gridBFS	HL:Xtreme-14.0/Rescue Mission	TODO-ADAPTER	Grid search primitive exists; full state space needs replay.
+14-rotational-lights	14.0	Rotational Lights	simulation|geometry	Point	HL:Xtreme-14.0/Rotational Lights	TODO-ADAPTER	Geometry and simulation need an adapter.
+15-candy-shop	15.0	Candy Shop	dp|recursion	custom	HL:Xtreme-15.0/Candy Shop (unsolved)	TODO-ADAPTER	Public best solution is partial.
+15-maximum-exploitation	15.0	Maximum Exploitation	greedy|sorting	std::sort	HL:Xtreme-15.0/Maximum Exploitation	TODO-ADAPTER	Sorting is available; greedy proof and replay are pending.
+15-rigged-dice	15.0	Rigged Dice	probability|math	custom	HL:Xtreme-15.0/Rigged Dice	TODO-ADAPTER	Probability transformation is problem-specific.
+16-andman	16.0	ANDman	tree|binary-lifting	BinaryLifting	HL:Xtreme-16.0/ANDman	PASS-MODULE	LCA and kth-ancestor primitives are unit-tested.
+16-invisible-ghosts	16.0	Invisible Ghosts	grid-search|bfs-dfs	gridBFS	HL:Xtreme-16.0/Invisible Ghosts	TODO-ADAPTER	Multi-source / stateful BFS needs replay.
+16-my-treat	16.0	My Treat	strings|parsing	custom	HL:Xtreme-16.0/My Treat	TODO-ADAPTER	Input parsing is problem-specific.
+16-scheduler	16.0	Scheduler	greedy|binary-search	firstTrue|lastTrue	HL:Xtreme-16.0/Scheduler	PASS-MODULE	Monotone binary-search predicates are unit-tested.
+16-language	16.0	What Language Am I Speaking	strings|frequency	count	HL:Xtreme-16.0/What Language Am I Speaking	TODO-ADAPTER	Frequency counting is simple but has no dedicated helper.
+17-bad-passwords	17.0	Bad Passwords	hashing|strings	DoubleHash	HL:Xtreme-17.0/Bad Passwords	TODO-ADAPTER	DoubleHash is tested; public solution is partial.
+17-caesar-redux	17.0	Caesar Redux	strings|encoding	custom	HL:Xtreme-17.0/Caesar Redux	TODO-ADAPTER	String cipher needs replay.
+17-dalvik	17.0	Dalvik	simulation|interpreters	custom	HL:Xtreme-17.0/Dalvik (unsolved)	TODO-ADAPTER	Public best solution is partial; custom interpreter required.
+17-dices	17.0	Dices	dp|modular-arithmetic	powMod	HL:Xtreme-17.0/Dices (unsolved)	TODO-ADAPTER	Modular primitives exist; public code is partial.
+17-ice-cubes	17.0	Ice Cubes	geometry|simulation	Point	HL:Xtreme-17.0/Ice Cubes	TODO-ADAPTER	Geometry primitives need problem-specific rules.
+17-labradoodle	17.0	Labradoodle	strings|parsing	custom	HL:Xtreme-17.0/Labradoodle	TODO-ADAPTER	Parsing strategy is not yet classified precisely.
+17-long-lines	17.0	Long Lines	geometry|simulation	Point	HL:Xtreme-17.0/Long Lines	TODO-ADAPTER	Geometry primitives exist.
+17-programmers-poem	17.0	Programmer's Poem	strings|parsing	custom	HL:Xtreme-17.0/Programmer's Poem	TODO-ADAPTER	Text parsing needs an adapter.
+17-restaurant-cipher	17.0	Restaurant Chipher	strings|encoding	custom	HL:Xtreme-17.0/Restaurant Chipher	TODO-ADAPTER	Text cipher needs replay.
+17-rumors	17.0	Rumors	graph|topological-sort	topologicalSort	HL:Xtreme-17.0/Rumors	PASS-MODULE	Topological sort is unit-tested.
+17-war-games	17.0	War Games	simulation|game	custom	HL:Xtreme-17.0/War Games	TODO-ADAPTER	Game rules need an adapter.
+17-watershed	17.0	Watershed	grid-search|bfs-dfs	gridBFS	HL:Xtreme-17.0/Watershed	TODO-ADAPTER	Flood-fill variant needs replay.
+18-sliding-window	18.0	Another Sliding Window Problem	sliding-window|math	windowSums|windowExtrema|countSubarraysAtMostSum	HL:Xtreme-18.0/Another Sliding Window Problem (unsolved)	PASS-MODULE	Fixed-window and nonnegative two-pointer helpers are unit-tested; public solution is partial.
+18-balls	18.0	Balls	combinatorics|inclusion-exclusion	Comb	HL:Xtreme-18.0/Balls (unsolved)	TODO-ADAPTER	Combinations are tested; inclusion-exclusion needs adaptation.
+18-brick-stacks	18.0	Brick stacks	stack|queue	stack	HL:Xtreme-18.0/Brick stacks	TODO-ADAPTER	STL sequence containers cover the core.
+18-digits-swap	18.0	Digits swap	greedy|strings	custom	HL:Xtreme-18.0/Digits swap	TODO-ADAPTER	Greedy exchange needs replay.
+18-data-sets	18.0	Disparate Data Sets	parsing|csv	split	HL:Xtreme-18.0/Disparate Data Sets	TODO-ADAPTER	CSV split helper is tested; schema rules need adaptation.
+18-icarus	18.0	Icarus	geometry	Point	HL:Xtreme-18.0/Icarus	TODO-ADAPTER	Geometry primitives exist.
+18-increasing-table	18.0	Increasing Table	dp	custom	HL:Xtreme-18.0/Increasing Table	TODO-ADAPTER	DP recurrence is problem-specific.
+18-kings-order	18.0	King's Order	graph|topological-sort|heap	topologicalSort	HL:Xtreme-18.0/King's Order	PASS-MODULE	Topological sort has a heap-based lexicographic implementation.
+18-laser-defence	18.0	Laser Defence	binary-search|geometry	firstTrue|lastTrue	HL:Xtreme-18.0/Laser Defence	PASS-MODULE	Monotone binary search and geometry primitives are unit-tested.
+18-power-of-three	18.0	Power of three	number-theory|modular-arithmetic	powMod	HL:Xtreme-18.0/Power of three	PASS-MODULE	Modular exponentiation is unit-tested.
+18-sierpinski	18.0	Sierpinski	recursion|fractal	custom	HL:Xtreme-18.0/Sierpinski	TODO-ADAPTER	Output construction is problem-specific.
+18-stick	18.0	Stick	geometry	Point|segmentsIntersect	HL:Xtreme-18.0/Stick	TODO-ADAPTER	Segment geometry is tested.
+18-two-fridges	18.0	Two Fridges	brute-force|combinatorics	custom	HL:Xtreme-18.0/Two Fridges	TODO-ADAPTER	Search space needs a problem adapter.
+19-become-as-one	19.0	Become as One	prefix-sum|segment-tree	Fenwick|LazySum	HL:Xtreme-19.0/Become as One	TODO-ADAPTER	Range-query structures are tested; reduction is pending.
+19-easy-sum	19.0	Easy Sum	number-theory	custom	HL:Xtreme-19.0/Easy Sum (unsolved)	TODO-ADAPTER	Public best solution is partial.
+19-hack-coach	19.0	Hack the coach!	graph|simulation	custom	HL:Xtreme-19.0/Hack the coach!	TODO-ADAPTER	Six-node graph search needs a compact adapter.
+19-magic-wands	19.0	Magic Wands	simulation|counting	custom	HL:Xtreme-19.0/Magic Wands	TODO-ADAPTER	Count-flip logic needs replay.
+19-casino	19.0	New Casino Game	number-theory|modular-arithmetic	powMod	HL:Xtreme-19.0/New Casino Game	PASS-MODULE	Modular arithmetic is tested.
+19-raju-matrix	19.0	Raju's Matrix Runs	grid-search|bfs-dfs	gridBFS	HL:Xtreme-19.0/Raju's Matrix Runs	TODO-ADAPTER	Grid traversal primitive exists; state rules need replay.
+19-ecc-point-addition	19.0	Secure Elliptic Curve Point Addition	number-theory|modular-arithmetic|geometry	powMod|modInverse	HL:Xtreme-19.0/Secure Elliptic Curve Point Addition	TODO-ADAPTER	Modular primitives exist; EC operations are absent.
+19-shailesh-triplet	19.0	Shailesh's Triplet	bitwise|combinatorics	bit-operations	HL:Xtreme-19.0/Shailesh's Triplet	TODO-ADAPTER	Bit primitives exist.
+19-stable-network	19.0	Stable Power Network	graph|mst|connectivity	kruskal|DSU	HL:Xtreme-19.0/Stable Power Network	PASS-MODULE	MST and DSU are unit-tested.
+19-twin-occurrence	19.0	The Twin Occurrence Quest	binary-search	firstTrue|lastTrue	HL:Xtreme-19.0/The Twin Occurrence Quest	PASS-MODULE	Monotone integer binary search is unit-tested.
+19-visit-egypt	19.0	Visit Egypt	dp	custom	HL:Xtreme-19.0/Visit Egypt	TODO-ADAPTER	DP recurrence needs a problem adapter.
+19-white-knights	19.0	White knights and Black warriors	brute-force|game	custom	HL:Xtreme-19.0/White knights and Black warriors	TODO-ADAPTER	State search needs replay.
