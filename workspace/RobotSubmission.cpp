@@ -4,7 +4,6 @@
 #include <queue>
 #include <string>
 #include <tuple>
-#include <type_traits>
 #include <utility>
 #include <vector>
 
@@ -208,7 +207,8 @@ void solve() {
         }
     }
 
-    int answer = gold[tr * C + tc];
+    int target = tr * C + tc;
+    int answer = gold[target];
     cout << (answer == INF32 ? -1 : answer) << '\n';
 }
 
