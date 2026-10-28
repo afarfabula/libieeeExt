@@ -5,7 +5,7 @@
 
 ## 当前状态
 
-- `board.cpp`: 70,482 / 100,000 bytes.
+- `board.cpp`: 70,964 / 100,000 bytes.
 - 单元测试: 12 组，覆盖大整数、数论、NTT/二维卷积、图、树、数据结构、
   字符串、几何、DP、滑动窗口、表达式解析和日期。
 - 历史题样例回放: 3 道，分别为 Dog Walking、Full Adder 和
@@ -52,6 +52,10 @@ tests/run_workspace_tests.sh
 当前 workspace 样例是 CS Academy `Robot in a Labyrinth`，使用 NTT
 二维卷积判断整串命令能否安全执行，并用 Dijkstra + next-occurrence
 自动机求最少金币数。
+
+- `workspace/TemplateMain.cpp`: 20,077 bytes，CS Academy 编译 4.89 秒。
+- `workspace/RobotSubmission.cpp`: 6,667 bytes，官方提交 100/100，
+  38/38 tests OK，耗时 264 ms，峰值内存 29.9 MB。
 
 ## 题库
 
