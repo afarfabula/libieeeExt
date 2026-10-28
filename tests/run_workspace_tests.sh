@@ -12,12 +12,15 @@ g++ -std=c++23 -static -O2 -pthread -Wall -Wno-unused-result \
 g++ -std=c++23 -static -O2 -pthread -Wall -Wno-unused-result \
     -DCS_ACADEMY -DONLINE_JUDGE \
     "$repo_root/workspace/TemplateMain.cpp" -o "$build_dir/template"
+g++ -std=c++23 -static -O2 -pthread -Wall -Wno-unused-result \
+    -DCS_ACADEMY -DONLINE_JUDGE \
+    "$repo_root/workspace/SubmissionMain.cpp" -o "$build_dir/submission"
 
 check() {
     local input="$1"
     local expected="$2"
     local actual
-    actual="$(printf '%s' "$input" | "$build_dir/workspace")"
+    actual="$(printf '%s' "$input" | "$build_dir/submission")"
     if [[ "$actual" != "$expected" ]]; then
         echo "workspace sample failed: expected $expected, got $actual" >&2
         exit 1
