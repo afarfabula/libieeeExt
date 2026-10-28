@@ -5,9 +5,9 @@
 
 ## 当前状态
 
-- `board.cpp`: 63,772 / 100,000 bytes.
-- 单元测试: 11 组，覆盖大整数、数论、图、树、数据结构、字符串、
-  几何、DP、滑动窗口、表达式解析和日期。
+- `board.cpp`: 70,482 / 100,000 bytes.
+- 单元测试: 12 组，覆盖大整数、数论、NTT/二维卷积、图、树、数据结构、
+  字符串、几何、DP、滑动窗口、表达式解析和日期。
 - 历史题样例回放: 3 道，分别为 Dog Walking、Full Adder 和
   N-Palindromes。
 - 题库索引: 92 条公开题目记录，覆盖 IEEEXtreme 10.0-19.0。
@@ -30,6 +30,21 @@ python3 tools/check_corpus.py --limit 50
 测试脚本同时检查源码体积、编译 `board.cpp`、运行单元测试和历史题
 样例回放。提交具体题目时，在 `board.cpp` 的 `ib::solve()` 中编写输入、
 算法组合和输出。
+
+## CS Academy Workspace
+
+`workspace/board.cpp` 是从通过测试的单文件板子自动生成的库文件，
+`workspace/Main.cpp` 是题目入口。不要让 `board.cpp` 携带上一题的
+`solve()`：
+
+```bash
+python3 tools/build_workspace_board.py
+tests/run_workspace_tests.sh
+```
+
+当前 workspace 样例是 CS Academy `Robot in a Labyrinth`，使用 NTT
+二维卷积判断整串命令能否安全执行，并用 Dijkstra + next-occurrence
+自动机求最少金币数。
 
 ## 题库
 

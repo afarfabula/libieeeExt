@@ -110,6 +110,23 @@ static void testNumberTheory() {
     CHECK(c.catalan(5) == 42);
 }
 
+static void testConvolutionAndAutomata() {
+    vector<vector<int>> a{{1, 2}, {3, 4}};
+    vector<vector<int>> b{{5, 6}, {7, 8}};
+    CHECK((convolution2D(a, b) ==
+           vector<vector<int>>{{5, 16, 12},
+                               {22, 60, 40},
+                               {21, 52, 32}}));
+
+    auto next = nextOccurrences("RULDR", "UDLR");
+    CHECK(next[3][0] == 0);  // R
+    CHECK(next[0][0] == 1);  // U
+    CHECK(next[2][0] == 2);  // L
+    CHECK(next[1][0] == 3);  // D
+    CHECK(next[3][1] == 4);  // the second R
+    CHECK(next[0][2] == 5);  // no U remains
+}
+
 static void testStructures() {
     Frac f = Frac(1, 3) + Frac(1, 6);
     CHECK(f == Frac(1, 2));
@@ -502,6 +519,7 @@ int main() {
     testBigInt();
     testBigIntDifferential();
     testNumberTheory();
+    testConvolutionAndAutomata();
     testStructures();
     testGraphs();
     testDataStructures();
