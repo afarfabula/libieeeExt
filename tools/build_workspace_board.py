@@ -25,6 +25,17 @@ int main() {
 }
 """
 
+TEMPLATE_OPTIONAL_SECTIONS = [
+    (
+        "// Arbitrary-precision integer",
+        "// Number theory and modular arithmetic",
+    ),
+    (
+        "// Parsing, dates and base conversion",
+        "// Contest entry point",
+    ),
+]
+
 
 def strip_line_comment(line: str) -> str:
     out: list[str] = []
@@ -83,7 +94,14 @@ def main() -> None:
         raise SystemExit(f"marker not found in {SOURCE}: {MARKER}")
     library = source.split(MARKER, 1)[0].rstrip()
     library += "\n\n} // namespace ib\n"
-    template = compact_source(library + TEMPLATE_SUFFIX)
+    core_source = source
+    for start_marker, end_marker in TEMPLATE_OPTIONAL_SECTIONS:
+        start = core_source.index(start_marker)
+        end = core_source.index(end_marker, start)
+        core_source = core_source[:start] + core_source[end:]
+    core = core_source.split(MARKER, 1)[0].rstrip()
+    core += "\n\n} // namespace ib\n"
+    template = compact_source(core + TEMPLATE_SUFFIX)
     submission = compact_source(source)
     TARGET.parent.mkdir(parents=True, exist_ok=True)
     TARGET.write_text(library, encoding="utf-8")

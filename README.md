@@ -34,10 +34,14 @@ python3 tools/check_corpus.py --limit 50
 ## CS Academy Workspace
 
 `workspace/board.cpp` 是从通过测试的单文件板子自动生成的库文件，
-`workspace/TemplateMain.cpp` 是展开库源码并压缩到 64 KB 以内的空白模板，
+`workspace/TemplateMain.cpp` 是展开库源码并压缩到 32 KB 以内的空白模板，
 `workspace/SubmissionMain.cpp` 是压缩后的完整本题提交文件。CS Academy
 的 Library File 不自动加入编译路径，因此提交入口必须自包含；不要让
 模板携带上一题的 `solve()`：
+
+CS Academy 的任务源码上限实测为 32,768 bytes。主模板因此省略 BigInt 和
+日期解析两个可选大模块；完整实现仍在 `board.cpp`，需要时生成题目级最小
+切片，或从 Library File 取回对应模块。
 
 ```bash
 python3 tools/build_workspace_board.py
