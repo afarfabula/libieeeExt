@@ -34,8 +34,9 @@ python3 tools/check_corpus.py --limit 50
 ## CS Academy Workspace
 
 `workspace/board.cpp` 是从通过测试的单文件板子自动生成的库文件，
-`workspace/Main.cpp` 是题目入口。不要让 `board.cpp` 携带上一题的
-`solve()`：
+`workspace/TemplateMain.cpp` 是展开库源码后的空白模板。CS Academy 的
+Library File 不自动加入编译路径，因此提交入口必须自包含；不要让模板
+携带上一题的 `solve()`：
 
 ```bash
 python3 tools/build_workspace_board.py

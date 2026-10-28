@@ -9,6 +9,9 @@ python3 "$repo_root/tools/build_workspace_board.py"
 g++ -std=c++23 -static -O2 -pthread -Wall -Wno-unused-result \
     -DCS_ACADEMY -DONLINE_JUDGE \
     "$repo_root/workspace/Main.cpp" -o "$build_dir/workspace"
+g++ -std=c++23 -static -O2 -pthread -Wall -Wno-unused-result \
+    -DCS_ACADEMY -DONLINE_JUDGE \
+    "$repo_root/workspace/TemplateMain.cpp" -o "$build_dir/template"
 
 check() {
     local input="$1"

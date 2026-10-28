@@ -6,7 +6,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "board.cpp"
 TARGET = ROOT / "workspace" / "board.cpp"
+TEMPLATE_MAIN = ROOT / "workspace" / "TemplateMain.cpp"
 MARKER = "// Contest entry point"
+
+TEMPLATE_SUFFIX = """
+
+void solve() {
+    // Put contest-specific input, algorithm selection, and output here.
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    solve();
+    return 0;
+}
+"""
 
 
 def main() -> None:
@@ -17,7 +32,12 @@ def main() -> None:
     library += "\n\n} // namespace ib\n"
     TARGET.parent.mkdir(parents=True, exist_ok=True)
     TARGET.write_text(library, encoding="utf-8")
+    TEMPLATE_MAIN.write_text(library + TEMPLATE_SUFFIX, encoding="utf-8")
     print(f"wrote {TARGET.relative_to(ROOT)} ({len(library.encode())} bytes)")
+    print(
+        f"wrote {TEMPLATE_MAIN.relative_to(ROOT)} "
+        f"({len(TEMPLATE_MAIN.read_bytes())} bytes)"
+    )
 
 
 if __name__ == "__main__":
