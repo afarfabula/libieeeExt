@@ -47,6 +47,7 @@ check $'1 10 6\nS........T\nLLRRRR\n' "1"
 check_robot $'4 4 4\n.S..\n##..\n...#\n#T##\nRRDL\n' "2"
 check_robot $'2 1 3\nS\nT\nRUL\n' "-1"
 check_robot $'1 10 6\nS........T\nLLRRRR\n' "1"
+check_robot $'4 4 3\n#...\n...S\n..##\n#..T\nRLD\n' "5"
 
 echo "workspace template samples passed"
 

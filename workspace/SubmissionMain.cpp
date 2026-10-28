@@ -2106,7 +2106,7 @@ if(whole[idx]){
 int nr=r+pr,nc=c+pc;
 if(nr>=0&&nr<R&&nc>=0&&nc<C&&
 grid[nr][nc]!='#')
-relax(nr*C+nc,g,pos);
+relax(nr*C+nc,g,N);
 }
 }
 int answer=gold[tr*C+tc];
