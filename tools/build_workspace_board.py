@@ -34,6 +34,26 @@ TEMPLATE_OPTIONAL_SECTIONS = [
         "// Parsing, dates and base conversion",
         "// Contest entry point",
     ),
+    (
+        "// Rational number (int64 based)",
+        "// Matrix",
+    ),
+    (
+        "// Matrix",
+        "// Disjoint sets",
+    ),
+    (
+        "// Strings",
+        "// 2D geometry",
+    ),
+    (
+        "// 2D geometry",
+        "// Dynamic programming and bit tricks",
+    ),
+    (
+        "// Dynamic programming and bit tricks",
+        "// Parsing, dates and base conversion",
+    ),
 ]
 
 
@@ -94,11 +114,25 @@ def main() -> None:
         raise SystemExit(f"marker not found in {SOURCE}: {MARKER}")
     library = source.split(MARKER, 1)[0].rstrip()
     library += "\n\n} // namespace ib\n"
-    core_source = source
+    ranges = []
     for start_marker, end_marker in TEMPLATE_OPTIONAL_SECTIONS:
-        start = core_source.index(start_marker)
-        end = core_source.index(end_marker, start)
-        core_source = core_source[:start] + core_source[end:]
+        start = source.index(start_marker)
+        end = source.index(end_marker, start)
+        ranges.append((start, end))
+    ranges.sort()
+    merged = []
+    for start, end in ranges:
+        if merged and start <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(end, merged[-1][1]))
+        else:
+            merged.append((start, end))
+    chunks = []
+    previous = 0
+    for start, end in merged:
+        chunks.append(source[previous:start])
+        previous = end
+    chunks.append(source[previous:])
+    core_source = "".join(chunks)
     core = core_source.split(MARKER, 1)[0].rstrip()
     core += "\n\n} // namespace ib\n"
     template = compact_source(core + TEMPLATE_SUFFIX)

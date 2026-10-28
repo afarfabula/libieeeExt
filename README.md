@@ -39,9 +39,10 @@ python3 tools/check_corpus.py --limit 50
 的 Library File 不自动加入编译路径，因此提交入口必须自包含；不要让
 模板携带上一题的 `solve()`：
 
-CS Academy 的任务源码上限实测为 32,768 bytes。主模板因此省略 BigInt 和
-日期解析两个可选大模块；完整实现仍在 `board.cpp`，需要时生成题目级最小
-切片，或从 Library File 取回对应模块。
+CS Academy 的任务源码上限实测为 32,768 bytes，且大型模板在官方编译机
+上可能触及 30 秒编译墙。主模板因此压缩为约 20 KB 的高频核心；BigInt、
+矩阵、进阶字符串、几何、DP 和日期解析仍保留在完整 `board.cpp`，需要时
+生成题目级最小切片，或从 Library File 取回对应模块。
 
 ```bash
 python3 tools/build_workspace_board.py
